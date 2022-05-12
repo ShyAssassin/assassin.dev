@@ -23,7 +23,6 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/lib/prismicio.js"
   ],
   "exclude": [
     "node_modules"
