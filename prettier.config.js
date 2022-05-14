@@ -1,6 +1,6 @@
 const options = {
     tabWidth: 4,
-    printWidth: 140,
+    printWidth: 200,
     semi: true,
     singleQuote: false,
     bracketSpacing: true,
