@@ -45,19 +45,19 @@ export default function socials() {
                     </VStack>
                     <SocialButton label={"Twitch"} href="https://www.twitch.tv/">
                         <FaTwitch />
-                        <Text>Twitch</Text>
+                        <Text>&nbsp;Twitch</Text>
                     </SocialButton>
                     <SocialButton label={"Twitter"} href="https://twitter.com/">
                         <FaTwitter />
-                        <Text>Twitter</Text>
+                        <Text>&nbsp;Twitter</Text>
                     </SocialButton>
                     <SocialButton label={"Github"} href="https://github.com/">
                         <FaGithub />
-                        <Text>Github</Text>
+                        <Text>&nbsp;Github</Text>
                     </SocialButton>
                     <SocialButton label={"Twitter"} href="https://www.twitch.tv/">
                         <FaDiscord />
-                        <Text>Discord</Text>
+                        <Text>&nbsp;Discord</Text>
                     </SocialButton>
                 </Stack>
             </Center>
