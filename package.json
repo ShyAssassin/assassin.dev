@@ -13,7 +13,7 @@
         "getSpotifyAuth": "npx ts-node ./scripts/getSpotifyAuth.ts"
     },
     "dependencies": {
-        "@chakra-ui/react": "^1.8.8",
+        "@chakra-ui/react": "^2.0.0",
         "@emotion/react": "^11.9.0",
         "@emotion/styled": "^11.8.1",
         "framer-motion": "^6.3.3",
@@ -21,6 +21,7 @@
         "react": "^18.1.0",
         "react-dom": "^18.1.0",
         "react-icons": "^4.3.1",
+        "sharp": "^0.30.4",
         "swr": "^1.3.0"
     },
     "devDependencies": {
