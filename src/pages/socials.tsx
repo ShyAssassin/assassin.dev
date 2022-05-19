@@ -3,6 +3,7 @@ import { chakra, useColorModeValue, VisuallyHidden } from "@chakra-ui/react";
 import { FaTwitter, FaTwitch, FaGithub, FaDiscord } from "react-icons/fa";
 import { ReactNode } from "react";
 import Head from "next/head";
+import Layout from "../components/layouts/layout";
 
 // Chakra button doesnt have a god damn href prop i want to die
 function SocialButton({ children, label, href }: { children: ReactNode; label: string; href: string }) {
@@ -31,12 +32,12 @@ function SocialButton({ children, label, href }: { children: ReactNode; label: s
 }
 export default function socials() {
     return (
-        <Box>
+        <Layout>
             <Head>
                 <title>Assasin | Socials</title>
             </Head>
 
-            <Center p={8}>
+            <Center p={2}>
                 <Stack spacing={4} align={"center"} maxW={"xl"} w={"full"}>
                     <VStack spacing={0} maxW={"xl"}>
                         <Avatar name="Assassin" size={"xl"} />
@@ -61,6 +62,6 @@ export default function socials() {
                     </SocialButton>
                 </Stack>
             </Center>
-        </Box>
+        </Layout>
     );
 }

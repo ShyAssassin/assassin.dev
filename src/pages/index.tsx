@@ -1,3 +1,10 @@
+import Layout from "../components/layouts/layout";
+import NowPlaying from "../components/NowPlaying";
+
 export default function Index() {
-    return <div>Hello World</div>;
+    return (
+        <Layout>
+            <NowPlaying></NowPlaying>
+        </Layout>
+    );
 }
