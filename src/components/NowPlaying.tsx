@@ -17,16 +17,20 @@ function SpotifyLogo() {
 }
 
 export default function NowPlaying() {
+    // regex to replace everything within the brackets of a song title
+    const regex = /\s*\(.*?\)\s*/g;
+    // get the current songs data
     const { data } = useSWR<NowPlayingSong>("/api/spotify/now-playing", fetcher);
-    const title = data?.title ?? "Not Playing";
+    // asign the data if null use default values
+    const title = data?.title.replace(regex, "") ?? "Not Playing";
     const artist = data?.artist ?? "Spotify";
     const songUrl = data?.songUrl;
     return (
-        <Box maxW={"xl"} w={"full"} mb={8}>
+        <Box maxW={"md"} w={"full"} mb={8}>
             <a href={songUrl} target="_blank" rel="noopener noreferrer">
                 <HStack spacing={1}>
                     <SpotifyLogo />
-                    <Box fontWeight={"bold"} fontSize={"13"} noOfLines={[1, 1]}>
+                    <Box fontWeight={"bold"} fontSize={"13"} noOfLines={1}>
                         {title}
                     </Box>
                     <Box fontWeight={"extrabold"} fontSize={"15"}>
@@ -35,7 +39,6 @@ export default function NowPlaying() {
                     <Box fontWeight={"normal"} fontSize={"12"} noOfLines={1}>
                         {artist}
                     </Box>
-                    Z
                 </HStack>
             </a>
         </Box>
