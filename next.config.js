@@ -9,6 +9,11 @@ const nextConfig = {
         buildActivity: true,
         buildActivityPosition: 'bottom-right',
     },
+    images: {
+        domains: [
+            'i.scdn.co' // Spotify Track/Album Art
+        ]
+    }
 }
 
 module.exports = nextConfig
