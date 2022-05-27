@@ -22,7 +22,7 @@ export default function NowPlaying() {
     // get the current songs data
     const { data } = useSWR<NowPlayingSong>("/api/spotify/now-playing", fetcher);
     // asign the data if null use default values
-    const title = data?.title.replace(regex, "") ?? "Not Playing";
+    const title = data?.title?.replace(regex, "") ?? "Not Playing";
     const artist = data?.artist ?? "Spotify";
     const songUrl = data?.songUrl;
     return (
