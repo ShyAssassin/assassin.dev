@@ -1,4 +1,4 @@
-export type NowPlayingSong = {
+export type Spotify_NowPlaying = {
     isPlaying: boolean;
     title: string;
     artist: string;

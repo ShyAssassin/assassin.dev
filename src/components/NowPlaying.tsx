@@ -1,6 +1,6 @@
 import useSWR from "swr";
 import fetcher from "../lib/fetcher";
-import { NowPlayingSong } from "../lib/types";
+import { Spotify_NowPlaying } from "../lib/types";
 import { Box as Box, HStack } from "@chakra-ui/react";
 
 function SpotifyLogo() {
@@ -20,7 +20,7 @@ export default function NowPlaying() {
     // regex to replace everything within the brackets of a song title
     const regex = /\s*\(.*?\)\s*/g;
     // get the current songs data
-    const { data } = useSWR<NowPlayingSong>("/api/spotify/now-playing", fetcher);
+    const { data } = useSWR<Spotify_NowPlaying>("/api/spotify/now-playing", fetcher);
     // asign the data if null use default values
     const title = data?.title?.replace(regex, "") ?? "Not Playing";
     const artist = data?.artist ?? "Spotify";
