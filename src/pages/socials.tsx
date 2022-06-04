@@ -40,23 +40,29 @@ export default function socials() {
             <Center p={2}>
                 <Stack spacing={4} align={"center"} maxW={"xl"} w={"full"}>
                     <VStack spacing={0} maxW={"xl"}>
-                        <Avatar name="Assassin" size={"xl"} />
+                        <Avatar
+                            name="Assassin"
+                            size={"xl"}
+                            // TODO: figure out why images load slower when using a image from `public/`
+                            src={"https://pbs.twimg.com/profile_images/1533042206189178885/Qye3arFj_400x400.jpg"}
+                            loading={"eager"}
+                        />
                         <Text fontSize={"3xl"}>Assassin</Text>
                         <Text>I do alot of dumb shit in VR</Text>
                     </VStack>
-                    <SocialButton label={"Twitch"} href="https://www.twitch.tv/">
-                        <FaTwitch />
-                        <Text>&nbsp;Twitch</Text>
-                    </SocialButton>
-                    <SocialButton label={"Twitter"} href="https://twitter.com/">
+                    <SocialButton label={"Twitter"} href="https://twitter.com/assassinsorrow">
                         <FaTwitter />
                         <Text>&nbsp;Twitter</Text>
                     </SocialButton>
-                    <SocialButton label={"Github"} href="https://github.com/">
+                    <SocialButton label={"Twitch"} href="https://www.twitch.tv/assassinsorrow">
+                        <FaTwitch />
+                        <Text>&nbsp;Twitch</Text>
+                    </SocialButton>
+                    <SocialButton label={"Github"} href="https://github.com/Assassinsorrow">
                         <FaGithub />
                         <Text>&nbsp;Github</Text>
                     </SocialButton>
-                    <SocialButton label={"Twitter"} href="https://www.twitch.tv/">
+                    <SocialButton label={"Twitter"} href="https://discord.com/">
                         <FaDiscord />
                         <Text>&nbsp;Discord</Text>
                     </SocialButton>
