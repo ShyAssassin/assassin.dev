@@ -1,6 +1,6 @@
 import { Stack, VStack, Box, Center, Avatar, Text } from "@chakra-ui/react";
 import { chakra, useColorModeValue, VisuallyHidden } from "@chakra-ui/react";
-import { FaTwitter, FaTwitch, FaGithub, FaDiscord } from "react-icons/fa";
+import { FaTwitter, FaTwitch, FaGithub, FaDiscord, FaSteam } from "react-icons/fa";
 import { ReactNode } from "react";
 import Head from "next/head";
 import Layout from "../components/layouts/layout";
@@ -35,6 +35,7 @@ export default function socials() {
         <Layout>
             <Head>
                 <title>Assasin | Socials</title>
+                <meta name="description" content="All of Assassinsorrow's links and socials" />
             </Head>
 
             <Center p={2}>
@@ -50,17 +51,21 @@ export default function socials() {
                         <Text fontSize={"3xl"}>Assassin</Text>
                         <Text>I do alot of dumb shit in VR</Text>
                     </VStack>
-                    <SocialButton label={"Twitter"} href="https://twitter.com/assassinsorrow">
+                    <SocialButton label={"Twitter"} href="https://twitter.com/assassinsorrow/">
                         <FaTwitter />
                         <Text>&nbsp;Twitter</Text>
                     </SocialButton>
-                    <SocialButton label={"Twitch"} href="https://www.twitch.tv/assassinsorrow">
+                    <SocialButton label={"Twitch"} href="https://www.twitch.tv/assassinsorrow/">
                         <FaTwitch />
                         <Text>&nbsp;Twitch</Text>
                     </SocialButton>
-                    <SocialButton label={"Github"} href="https://github.com/Assassinsorrow">
+                    <SocialButton label={"Github"} href="https://github.com/Assassinsorrow/">
                         <FaGithub />
                         <Text>&nbsp;Github</Text>
+                    </SocialButton>
+                    <SocialButton label={"Steam"} href="https://steamcommunity.com/id/assassinsorrow/">
+                        <FaSteam />
+                        <Text>&nbsp;Steam</Text>
                     </SocialButton>
                     <SocialButton label={"Twitter"} href="https://discord.com/">
                         <FaDiscord />
