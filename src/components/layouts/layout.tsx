@@ -9,7 +9,7 @@ const variants = {
 
 export default function Layout({ children }) {
     return (
-        <Container maxW={"3xl"}>
+        <Container maxW={"2xl"}>
             <motion.main
                 initial="hidden"
                 animate="enter"

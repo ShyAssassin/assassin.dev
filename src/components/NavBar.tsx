@@ -29,7 +29,7 @@ function LinkItem({ href, children, path, ...props }) {
 export default function NavBar({ router }) {
     return (
         <Box w="100%">
-            <Container display={"flex"} p={2} maxW={"4xl"} justifyContent={"space-between"} alignItems={"center"} flexWrap={"wrap"}>
+            <Container display={"flex"} p={2} maxW={"3xl"} justifyContent={"space-between"} alignItems={"center"} flexWrap={"wrap"}>
                 {/* logo */}
                 <Flex align="center" cursor={"pointer"} mr={0}>
                     <Heading as="h1" size="md" letterSpacing={"wide"}>
