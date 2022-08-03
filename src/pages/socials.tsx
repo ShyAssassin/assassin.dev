@@ -4,6 +4,7 @@ import { FaTwitter, FaTwitch, FaGithub, FaDiscord, FaSteam } from "react-icons/f
 import { ReactNode } from "react";
 import Head from "next/head";
 import Layout from "../components/layouts/layout";
+import ProfilePicture from "../components/ProfilePicture";
 
 // Chakra button doesnt have a god damn href prop i want to die
 function SocialButton({ children, label, href }: { children: ReactNode; label: string; href: string }) {
@@ -41,14 +42,8 @@ export default function socials() {
             <Center p={2}>
                 <Stack spacing={4} align={"center"} maxW={"xl"} w={"full"}>
                     <VStack spacing={0} maxW={"xl"}>
-                        <Avatar
-                            name="Assassin"
-                            size={"xl"}
-                            // TODO: figure out why images load slower when using a image from `public/`
-                            src={"https://pbs.twimg.com/profile_images/1533042206189178885/Qye3arFj_400x400.jpg"}
-                            loading={"eager"}
-                        />
-                        <Text fontSize={"3xl"}>Assassin</Text>
+                        <ProfilePicture />
+                        <Text fontSize={"3xl"}>[Assassin]</Text>
                         <Text>I do alot of dumb shit in VR</Text>
                     </VStack>
                     <SocialButton label={"Twitter"} href="https://twitter.com/assassinsorrow/">
