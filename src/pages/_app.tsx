@@ -2,6 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../lib/theme";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 
 export default function App({ Component, pageProps, router }) {
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps, router }) {
             <AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
                 <Component {...pageProps} key={router.route} />
             </AnimatePresence>
+            <Footer />
         </ChakraProvider>
     );
 }

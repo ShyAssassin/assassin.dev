@@ -26,7 +26,7 @@ export default function NowPlaying() {
     const artist = data?.artist ?? "Spotify";
     const songUrl = data?.songUrl;
     return (
-        <Box maxW={"md"} w={"full"} mb={8}>
+        <Box maxW={"md"} w={"full"} mb={2}>
             <a href={songUrl} target="_blank" rel="noopener noreferrer">
                 <HStack spacing={1}>
                     <SpotifyLogo />
