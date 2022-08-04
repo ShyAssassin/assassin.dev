@@ -20,7 +20,7 @@ export default function NowPlaying({ml = 0}) {
     // regex to replace everything within the brackets of a song title
     const regex = /\s*\(.*?\)\s*/g;
     // get the current songs data
-    const { data } = useSWR<Spotify_NowPlaying>("/api/spotify/now-playing", fetcher);
+    const { data } = useSWR<Spotify_NowPlaying>("/api/spotify/now-playing", fetcher, { refreshInterval: 60000 }); // refresh every minute
     // asign the data if null use default values
     const title = data?.title?.replace(regex, "") ?? "Not Playing";
     const artist = data?.artist ?? "Spotify";
