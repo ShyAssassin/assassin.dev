@@ -55,8 +55,8 @@ export default function NavBar({ router }) {
                     <LinkItem path={router} href={"/socials"}>
                         Socials
                     </LinkItem>
-                    <LinkItem path={router} href={"/spotify"}>
-                        Spotify
+                    <LinkItem path={router} href={"/setup"}>
+                        Setup
                     </LinkItem>
                 </Stack>
                 {/* items aligned to right of screen */}
@@ -79,6 +79,9 @@ export default function NavBar({ router }) {
                                 </NextLink>
                                 <NextLink href={"/socials"} scroll={false}>
                                     <MenuItem as={Link}>Socials</MenuItem>
+                                </NextLink>
+                                <NextLink href={"/setup"} scroll={false}>
+                                    <MenuItem as={Link}>Setup</MenuItem>
                                 </NextLink>
                                 <NextLink href={"/spotify"} scroll={false}>
                                     <MenuItem as={Link}>Spotify</MenuItem>
