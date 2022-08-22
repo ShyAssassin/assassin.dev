@@ -1,4 +1,4 @@
-import { Stack, VStack, Box, Center, Avatar, Text } from "@chakra-ui/react";
+import { Stack, VStack, Center, Text } from "@chakra-ui/react";
 import { chakra, useColorModeValue, VisuallyHidden } from "@chakra-ui/react";
 import { FaTwitter, FaTwitch, FaGithub, FaDiscord, FaSteam } from "react-icons/fa";
 import { ReactNode } from "react";
@@ -35,7 +35,7 @@ export default function socials() {
     return (
         <Layout>
             <Head>
-                <title>Assasin | Socials</title>
+                <title>Assassin | Socials</title>
                 <meta name="description" content="All of Assassinsorrow's links and socials" />
             </Head>
 
