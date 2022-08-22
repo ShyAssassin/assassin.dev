@@ -22,13 +22,13 @@ export default function Index() {
                         <p style={{marginLeft: 25}}>Software Engineer ( Artist / Developer / Designer )</p>
                         <NowPlaying ml={50}/>
                     </Box>
-                    <Box flexShrink={0} mt={{ base: 4, md: -3 }} ml={{ md: 6 }} textAlign="center">
+                    <Box flexShrink={0} mt={{ base: 4, md: -4 }} ml={{ md: 6 }} textAlign="center">
                         <ProfilePicture />
                     </Box>
                 </Box>
                 {/* Mobile specific */}
                 <Box flexGrow={1} display={{ base: "inline-block", md: "none" }}>
-                    <Box flexShrink={0} mt={{ base: 4, md: -3 }} ml={"4"} textAlign="left">
+                    <Box flexShrink={0} ml={"4"} textAlign="left">
                         <ProfilePicture size="xl"/>
                     </Box>
                     <Box flexGrow={1}>
