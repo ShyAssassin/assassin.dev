@@ -49,9 +49,9 @@ export default function NavBar({ router }) {
                     <LinkItem path={router} href={"/projects"}>
                         Projects
                     </LinkItem>
-                    <LinkItem path={router} href={"/blog"}>
+                    {/* <LinkItem path={router} href={"/blog"}>
                         Blog
-                    </LinkItem>
+                    </LinkItem> */}
                     <LinkItem path={router} href={"/socials"}>
                         Socials
                     </LinkItem>
@@ -74,9 +74,9 @@ export default function NavBar({ router }) {
                                 <NextLink href={"/projects"} scroll={false}>
                                     <MenuItem as={Link}>Projects</MenuItem>
                                 </NextLink>
-                                <NextLink href={"/blog"} scroll={false}>
+                                {/* <NextLink href={"/blog"} scroll={false}>
                                     <MenuItem as={Link}>Blog</MenuItem>
-                                </NextLink>
+                                </NextLink> */}
                                 <NextLink href={"/socials"} scroll={false}>
                                     <MenuItem as={Link}>Socials</MenuItem>
                                 </NextLink>
