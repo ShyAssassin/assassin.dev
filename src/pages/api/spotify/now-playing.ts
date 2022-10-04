@@ -5,16 +5,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // get data
     const response = await GetNowPlaying();
 
-    // return Playing false if something goes wrong
+    // return `isPlaying` false to avoid errors if something went wrong while fetching data
     if (response.status == 204 || response.status > 400) {
         return res.status(200).json({ isPlaying: false, response: response.status });
     }
 
     const song = await response.json();
 
-    // return Playing false if song is not playing
-    if (song.item === null) {
-        return res.status(200).json({ isPlaying: false });
+    // for some reason if a song was paused / stopped spotify will still return the last played song, even if `is_playing` is false.
+    // also at times the song object will be empty if no song is playing, so we check for that too.
+    // if any of these are true we return `isPlaying` as false
+    if (song === null || song.item === null || !song.is_playing) {
+        return res.status(200).json({ isPlaying: false }); // NOTE: this response isnt cached everytime this API is called it will make a new request to spotify
     }
 
     // extract the data we want
@@ -26,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const songUrl = song.item.external_urls.spotify;
 
     // set headers
-    res.setHeader("Cache-Control", "public, s-maxage=60, stale-while-revalidate=30");
+    res.setHeader("Cache-Control", "public, s-maxage=30");
 
     // return the data
     return res.status(200).json({
