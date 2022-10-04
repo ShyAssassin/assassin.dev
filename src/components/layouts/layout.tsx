@@ -12,8 +12,6 @@ export default function Layout({ children }) {
         <Container maxW={"2xl"}>
             <motion.main
                 initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
                 animate="enter"
                 exit="exit"
                 variants={variants}
