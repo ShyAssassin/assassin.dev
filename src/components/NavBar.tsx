@@ -2,12 +2,13 @@ import Logo from "./Logo";
 import NextLink from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ThemeToggleButton from "./ThemeToggleButton";
-import { Box, Container, Stack, Button, Link, IconButton } from "@chakra-ui/react";
 import { Heading, Flex, MenuList, Menu, MenuItem, MenuButton } from "@chakra-ui/react";
+import { Box, Container, Stack, Button, Link, IconButton, useColorModeValue } from "@chakra-ui/react";
 
 // See: https://nextjs.org/docs/messages/react-hydration-error
 function LinkItem({ href, children, path, ...props }) {
     const active = path === href;
+    const backgroundColor = useColorModeValue("gray.100", "gray.700");
     return (
         <NextLink href={href} passHref scroll={false}>
             <Button
@@ -17,7 +18,7 @@ function LinkItem({ href, children, path, ...props }) {
                 variant={"ghost"}
                 alignItems={"center"}
                 boxShadow={"none !important"}
-                bg={active ? "gray.700" : "transparent"}
+                bg={active ? backgroundColor : "transparent"}
                 fontWeight={active ? "bold" : "normal"}
                 {...props}>
                 {children}
