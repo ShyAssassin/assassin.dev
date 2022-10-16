@@ -34,7 +34,6 @@ This project is under the MIT License.
 I'm cool with anyone using the code or parts of the code for their own site or presonal project, it is open source so people can learn from it and adapt it.\
 However, you **must** follow the following conditions.
 
--   Add a link back to [my homepage](https://assassin.dev/) and this [repository](https://github.com/Assassinsorrow/assassin.dev).
 -   Do not present any of the projects from `/projects` as your own.
 -   Do not use any art (images, models, etc) of my OC (Original Character).
 
