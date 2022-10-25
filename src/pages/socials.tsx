@@ -31,12 +31,12 @@ function SocialButton({ children, label, href }: { children: ReactNode; label: s
         </chakra.button>
     );
 }
-export default function socials() {
+export default function Socials() {
     return (
         <Layout>
             <Head>
                 <title>Assassin | Socials</title>
-                <meta name="description" content="All of Assassinsorrow's links and socials" />
+                <meta name="description" content="All of ShyAssassin's links and socials" />
             </Head>
 
             <Center p={2}>
@@ -46,19 +46,19 @@ export default function socials() {
                         <Text fontSize={"3xl"}>[Assassin]</Text>
                         <Text>I do alot of dumb shit in VR</Text>
                     </VStack>
-                    <SocialButton label={"Twitter"} href="https://twitter.com/assassinsorrow/">
+                    <SocialButton label={"Twitter"} href="https://twitter.com/ShyyAssassin/">
                         <FaTwitter />
                         <Text>&nbsp;Twitter</Text>
                     </SocialButton>
-                    <SocialButton label={"Twitch"} href="https://www.twitch.tv/assassinsorrow/">
+                    <SocialButton label={"Twitch"} href="https://www.twitch.tv/ShyyAssassin/">
                         <FaTwitch />
                         <Text>&nbsp;Twitch</Text>
                     </SocialButton>
-                    <SocialButton label={"Github"} href="https://github.com/Assassinsorrow/">
+                    <SocialButton label={"Github"} href="https://github.com/ShyAssassin/">
                         <FaGithub />
                         <Text>&nbsp;Github</Text>
                     </SocialButton>
-                    <SocialButton label={"Steam"} href="https://steamcommunity.com/id/assassinsorrow/">
+                    <SocialButton label={"Steam"} href="https://steamcommunity.com/id/ShyyAssassin/">
                         <FaSteam />
                         <Text>&nbsp;Steam</Text>
                     </SocialButton>
