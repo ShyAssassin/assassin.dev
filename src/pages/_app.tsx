@@ -14,7 +14,12 @@ export default function App({ Component, pageProps, router }: AppProps) {
                 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
             </Head>
             <NavBar router={router.pathname} />
-            <AnimatePresence exitBeforeEnter initial={true} onExitComplete={() => window.scrollTo(0, 0)}>
+            {/* 
+                for some reason animating on page load sometimes causes the entire page to frreze for a second
+                when loaded for the first time if nothing is cached on some chromium based broswers?????? 
+                TODO: this is fucked figure out what is wrong; most probably a issue with something wanting to be loaded and taking too long
+            */}
+            <AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
                 <Component {...pageProps} key={router.route} />
                 <Footer />
             </AnimatePresence>
