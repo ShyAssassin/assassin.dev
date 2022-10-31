@@ -16,7 +16,7 @@ function SpotifyLogo() {
     );
 }
 
-export default function NowPlaying({ml = 0}) {
+export default function NowPlaying({ ml = 0 }) {
     // regex to replace everything within the brackets of a song title
     const regex = /\s*\(.*?\)\s*/g;
     // get the current songs data
@@ -26,7 +26,7 @@ export default function NowPlaying({ml = 0}) {
     const artist = data?.artist ?? "Spotify";
     const songUrl = data?.songUrl;
     return (
-        <Box maxW={"md"} w={"full"} style={{marginLeft: ml}}>
+        <Box maxW={"md"} w={"full"} style={{ marginLeft: ml }}>
             <a href={songUrl} target="_blank" rel="noopener noreferrer">
                 <HStack spacing={1}>
                     <SpotifyLogo />
