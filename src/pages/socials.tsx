@@ -1,6 +1,6 @@
 import { Stack, VStack, Center, Text } from "@chakra-ui/react";
 import { chakra, useColorModeValue, VisuallyHidden } from "@chakra-ui/react";
-import { FaTwitter, FaTwitch, FaGithub, FaDiscord, FaSteam } from "react-icons/fa";
+import { FaTwitter, FaTwitch, FaGithub, FaDiscord, FaSteam, FaMastodon } from "react-icons/fa";
 import { ReactNode } from "react";
 import Head from "next/head";
 import Layout from "../components/layouts/layout";
@@ -49,6 +49,10 @@ export default function Socials() {
                     <SocialButton label={"Twitter"} href="https://twitter.com/ShyyAssassin/">
                         <FaTwitter />
                         <Text>&nbsp;Twitter</Text>
+                    </SocialButton>
+                    <SocialButton label="Mastodon" href="https://tilde.zone/@ShyAssassin">
+                        <FaMastodon />
+                        <Text>&nbsp;Mastodon</Text>
                     </SocialButton>
                     <SocialButton label={"Twitch"} href="https://www.twitch.tv/ShyyAssassin/">
                         <FaTwitch />
