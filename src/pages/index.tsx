@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/layouts/layout";
-import Technologies from "../components/Technologies";
+// import Technologies from "../components/Technologies";
 import NowPlaying from "../components/NowPlaying";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import ProfilePicture from "../components/ProfilePicture";
@@ -46,7 +46,7 @@ export default function Index() {
                     </Box>
                 </Box>
             </Box>
-            <Technologies />
+            {/* <Technologies /> */}
         </Layout>
     );
 }
