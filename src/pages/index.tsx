@@ -21,7 +21,7 @@ export default function Index() {
                             [Assassin]
                         </Heading>
                         <Text fontSize={19} style={{ marginLeft: 25 }}>
-                            Software Engineer ( Vtuber / Streamer / Designer )
+                            Software Engineer ( Streamer / Developer / Designer )
                         </Text>
                         {/* <p style={{ marginLeft: 50 }}>Embeded Development engineer at Valve</p> */} {/* one day :') */}
                         <NowPlaying ml={50} />
@@ -37,8 +37,8 @@ export default function Index() {
                             <Heading as="h2" variant="page-title">
                                 [Assassin]
                             </Heading>
-                            <Text noOfLines={1} fontSize={[16.5, 19.5]} style={{ marginLeft: 15 }}>
-                                Software Engineer ( Vtuber / Streamer / Designer )
+                            <Text noOfLines={1} fontSize={[16.5, 20]} style={{ marginLeft: 15 }}>
+                                Software Engineer ( Streamer / Developer / Designer )
                             </Text>
                             {/* <p style={{ marginLeft: 30 }}>Embeded Development engineer at Valve</p> */} {/* one day :') */}
                             <NowPlaying ml={30} />
@@ -46,7 +46,6 @@ export default function Index() {
                     </Box>
                 </Box>
             </Box>
-            {/* <Technologies /> */}
         </Layout>
     );
 }
