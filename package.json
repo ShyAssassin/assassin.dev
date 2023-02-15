@@ -2,7 +2,7 @@
     "name": "assassin.dev",
     "version": "1.0.0",
     "description": "Assassin's personal website",
-    "author": "Assassinsorrow",
+    "author": "ShyAssassin",
     "license": "MIT",
     "scripts": {
         "dev": "next dev -H 127.0.0.1 -p 4141",
