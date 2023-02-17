@@ -5,7 +5,7 @@ export default function Footer() {
         // for some reason align isnt a type? 
         // @ts-ignore
         <Box align="center" opacity={0.4} fontSize="sm"> 
-            &copy; {new Date().getFullYear()} Assassinsorrow. All Rights Reserved.
+            &copy; {new Date().getFullYear()} ShyAssassin. All Rights Reserved.
         </Box>
     );
 }
