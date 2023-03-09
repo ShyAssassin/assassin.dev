@@ -9,7 +9,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // loop through each element and get data
     const artist = items.slice(0, 10).map(artist => ({
         name: artist.name,
-        followers: artist.followers.total,
         genres: artist.genres.join(", "),
         image: artist.images[0].url,
         artistUrl: artist.external_urls.spotify
