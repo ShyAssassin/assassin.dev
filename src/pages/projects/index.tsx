@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { SimpleGrid, Box } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import Layout from "../../components/layouts/layout";
 import ProjectCard from "../../components/ProjectCard";
 
@@ -8,7 +8,7 @@ import placholder from "../../../public/images/projects/placholder.png";
 import assassin_dev from "../../../public/images/projects/assassin-dev.png";
 import Monarch from "../../../public/images/projects/monarch.png";
 
-export default function projects() {
+export default function Projects() {
     return (
         <Layout>
             <Head>
