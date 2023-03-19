@@ -2,9 +2,9 @@ import { Box } from "@chakra-ui/react";
 
 export default function Footer() {
     return (
-        // for some reason align isnt a type? 
+        // for some reason align isnt a type?
         // @ts-ignore
-        <Box align="center" opacity={0.4} fontSize="sm"> 
+        <Box align="center" opacity={0.4} fontSize="sm">
             &copy; {new Date().getFullYear()} ShyAssassin. All Rights Reserved.
         </Box>
     );

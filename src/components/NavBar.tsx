@@ -1,7 +1,7 @@
-import Logo from "./Logo";
+import Logo from "@components/Logo";
 import NextLink from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
-import ThemeToggleButton from "./ThemeToggleButton";
+import ThemeToggleButton from "@components/ThemeToggleButton";
 import { Heading, Flex, MenuList, Menu, MenuItem, MenuButton } from "@chakra-ui/react";
 import { Box, Container, Stack, Button, Link, IconButton, useColorModeValue } from "@chakra-ui/react";
 

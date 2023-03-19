@@ -3,8 +3,8 @@ import { chakra, useColorModeValue, VisuallyHidden } from "@chakra-ui/react";
 import { FaTwitter, FaTwitch, FaGithub, FaDiscord, FaSteam, FaMastodon } from "react-icons/fa";
 import { ReactNode } from "react";
 import Head from "next/head";
-import Layout from "../components/layouts/layout";
-import ProfilePicture from "../components/ProfilePicture";
+import Layout from "@components/layouts/layout";
+import ProfilePicture from "@components/ProfilePicture";
 
 // Chakra button doesnt have a god damn href prop i want to die
 function SocialButton({ children, label, href }: { children: ReactNode; label: string; href: string }) {

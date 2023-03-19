@@ -1,9 +1,9 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import theme from "../lib/theme";
+import theme from "@lib/theme";
 import Head from "next/head";
 import type { AppProps } from "next/app";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+import NavBar from "@components/NavBar";
+import Footer from "@components/Footer";
 import { AnimatePresence } from "framer-motion";
 
 export default function App({ Component, pageProps, router }: AppProps) {

@@ -1,6 +1,6 @@
 import useSWR from "swr";
-import fetcher from "../lib/fetcher";
-import { Spotify_NowPlaying } from "../lib/types";
+import fetcher from "@lib/fetcher";
+import { Spotify_NowPlaying } from "@lib/types";
 import { Box as Box, HStack } from "@chakra-ui/react";
 
 function SpotifyLogo() {

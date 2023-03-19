@@ -1,12 +1,12 @@
 import Head from "next/head";
 import { SimpleGrid } from "@chakra-ui/react";
-import Layout from "../../components/layouts/layout";
-import ProjectCard from "../../components/ProjectCard";
+import Layout from "@components/layouts/layout";
+import ProjectCard from "@components/ProjectCard";
 
 // for some reason `next/image` doesnt work if provided a URL
-import placholder from "../../../public/images/projects/placholder.png";
-import assassin_dev from "../../../public/images/projects/assassin-dev.png";
-import Monarch from "../../../public/images/projects/monarch.png";
+import placholder from "@public/images/projects/placholder.png";
+import assassin_dev from "@public/images/projects/assassin-dev.png";
+import Monarch from "@public/images/projects/monarch.png";
 
 export default function Projects() {
     return (

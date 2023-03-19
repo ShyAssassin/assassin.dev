@@ -25,6 +25,8 @@ async function GetAccessToken() {
     return response.json();
 }
 
+export async function GetRefreshToken() {}
+
 // get current playing track
 export async function GetNowPlaying() {
     const { access_token } = await GetAccessToken();

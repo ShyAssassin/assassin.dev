@@ -1,6 +1,6 @@
 import { Avatar } from "@chakra-ui/react";
 
-export default function ProfilePicture({size = "2xl"}) {
+export default function ProfilePicture({ size = "2xl" }) {
     return (
         <Avatar
             name="Assassin"

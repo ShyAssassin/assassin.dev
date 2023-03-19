@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { GetTopArtists } from "../../../lib/spotify";
+import { GetTopArtists } from "@lib/spotify";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     // request data
