@@ -19,7 +19,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
                 when loaded for the first time if nothing is cached on some chromium based broswers?????? 
                 TODO: this is fucked figure out what is wrong; most probably a issue with something wanting to be loaded and taking too long
             */}
-            <AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+            <AnimatePresence mode={"wait"} initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
                 <Component {...pageProps} key={router.route} />
                 <Footer />
             </AnimatePresence>

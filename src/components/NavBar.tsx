@@ -13,11 +13,10 @@ function LinkItem({ href, children, path, ...props }) {
         <NextLink href={href} passHref scroll={false}>
             <Button
                 size={"md"}
-                as={"a"}
                 rounded={"md"}
                 variant={"ghost"}
                 alignItems={"center"}
-                boxShadow={"none !important"}
+                boxShadow={"none !important"} // Why is this here?
                 bg={active ? backgroundColor : "transparent"}
                 fontWeight={active ? "bold" : "normal"}
                 {...props}>
