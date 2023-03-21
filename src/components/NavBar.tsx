@@ -3,28 +3,8 @@ import NextLink from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ThemeToggleButton from "@components/ThemeToggleButton";
 import { Heading, Flex, MenuList, Menu, MenuItem, MenuButton } from "@chakra-ui/react";
-import { Box, Container, Stack, Button, Link, IconButton, useColorModeValue } from "@chakra-ui/react";
-
-// See: https://nextjs.org/docs/messages/react-hydration-error
-function LinkItem({ href, children, path, ...props }) {
-    const active = path === href;
-    const backgroundColor = useColorModeValue("gray.100", "gray.700");
-    return (
-        <NextLink href={href} passHref scroll={false}>
-            <Button
-                size={"md"}
-                rounded={"md"}
-                variant={"ghost"}
-                alignItems={"center"}
-                boxShadow={"none !important"} // Why is this here?
-                bg={active ? backgroundColor : "transparent"}
-                fontWeight={active ? "bold" : "normal"}
-                {...props}>
-                {children}
-            </Button>
-        </NextLink>
-    );
-}
+import { Box, Container, Stack, Link, IconButton } from "@chakra-ui/react";
+import NavBarLink from "@components/NavBarLink";
 
 export default function NavBar({ router }) {
     return (
@@ -46,18 +26,18 @@ export default function NavBar({ router }) {
                     alignItems="center"
                     flexGrow={1}
                     as={"nav"}>
-                    <LinkItem path={router} href={"/projects"}>
+                    <NavBarLink path={router} href={"/projects"}>
                         Projects
-                    </LinkItem>
-                    {/* <LinkItem path={router} href={"/blog"}>
+                    </NavBarLink>
+                    {/* <NavBarLink path={router} href={"/blog"}>
                         Blog
-                    </LinkItem> */}
-                    <LinkItem path={router} href={"/socials"}>
+                    </NavBarLink> */}
+                    <NavBarLink path={router} href={"/socials"}>
                         Socials
-                    </LinkItem>
-                    <LinkItem path={router} href={"/setup"}>
+                    </NavBarLink>
+                    <NavBarLink path={router} href={"/setup"}>
                         Setup
-                    </LinkItem>
+                    </NavBarLink>
                 </Stack>
                 {/* items aligned to right of screen */}
                 {/* @ts-ignore */} {/* for some reason align isnt a type? */}
@@ -86,7 +66,7 @@ export default function NavBar({ router }) {
                                 <NextLink href={"/spotify"} scroll={false}>
                                     <MenuItem as={Link}>Spotify</MenuItem>
                                 </NextLink>
-                                <MenuItem as={"a"} href="https://github.com/Assassinsorrow/assassin.dev">
+                                <MenuItem as={"a"} href="https://github.com/ShyAssassin/assassin.dev">
                                     View Source
                                 </MenuItem>
                             </MenuList>
