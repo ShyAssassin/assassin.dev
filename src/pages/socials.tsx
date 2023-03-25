@@ -1,36 +1,10 @@
 import { Stack, VStack, Center, Text } from "@chakra-ui/react";
-import { chakra, useColorModeValue, VisuallyHidden } from "@chakra-ui/react";
 import { FaTwitter, FaTwitch, FaGithub, FaDiscord, FaSteam, FaMastodon } from "react-icons/fa";
-import { ReactNode } from "react";
 import Head from "next/head";
 import Layout from "@components/layouts/layout";
 import ProfilePicture from "@components/ProfilePicture";
+import SocialButton from "@components/SocialButton";
 
-// Chakra button doesnt have a god damn href prop i want to die
-function SocialButton({ children, label, href }: { children: ReactNode; label: string; href: string }) {
-    return (
-        <chakra.button
-            bg={useColorModeValue("blackAlpha.200", "whiteAlpha.200")}
-            rounded={"full"}
-            w={"full"}
-            h={"10"}
-            cursor={"pointer"}
-            as={"a"}
-            href={href}
-            target={"_blank"}
-            rel={"noopener noreferrer"}
-            display={"inline-flex"}
-            alignItems={"center"}
-            justifyContent={"center"}
-            transition={"background 0.3s ease"}
-            _hover={{
-                bg: useColorModeValue("blackAlpha.300", "whiteAlpha.300")
-            }}>
-            <VisuallyHidden>{label}</VisuallyHidden>
-            {children}
-        </chakra.button>
-    );
-}
 export default function Socials() {
     return (
         <Layout>
