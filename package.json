@@ -9,7 +9,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "prettier": "prettier ./src --write",
+        "format": "prettier ./src --write",
         "getSpotifyAuth": "npx ts-node ./scripts/getSpotifyAuth.ts"
     },
     "dependencies": {
