@@ -2,6 +2,7 @@ const clientId = process.env.SPOTIFY_CLIENT_ID;
 const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
 const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
 
+const DEVICES_ENDPOINT = `https://api.spotify.com/v1/me/player/devices`;
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks`;
 const TOP_ARTISTS_ENDPOINT = `https://api.spotify.com/v1/me/top/artists`;
@@ -31,6 +32,15 @@ export async function GetRefreshToken() {}
 export async function GetNowPlaying() {
     const { access_token } = await GetAccessToken();
     return fetch(NOW_PLAYING_ENDPOINT, {
+        headers: {
+            Authorization: `Bearer ${access_token}`
+        }
+    });
+}
+
+export async function GetDevices() {
+    const { access_token } = await GetAccessToken();
+    return fetch(DEVICES_ENDPOINT, {
         headers: {
             Authorization: `Bearer ${access_token}`
         }
