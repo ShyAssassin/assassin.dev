@@ -2,6 +2,7 @@
     "name": "assassin.dev",
     "version": "1.0.0",
     "description": "Assassin's personal website",
+    "homepage": "https://assassin.dev",
     "author": "ShyAssassin",
     "license": "MIT",
     "scripts": {
