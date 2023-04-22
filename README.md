@@ -18,7 +18,7 @@ This application requires Nodejs version `16.13+`.\
 Port `4141` is used by default on locallhost when running dev builds.
 
 ```bash
-git clone https://github.com/Assassinsorrow/assassin.dev
+git clone https://github.com/ShyAssassin/assassin.dev
 cd assassin.dev
 npm install
 cp .env.example .env
