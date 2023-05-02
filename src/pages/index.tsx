@@ -21,14 +21,13 @@ export default function Index() {
                             [Assassin]
                         </Heading>
                         {/* weird fucking bug, fontsize is too big on firefox on unix based systems */}
-                        {/* this is hopefully a temporary fix */}
-                        <Text fontSize={18} style={{ marginLeft: 25 }} noOfLines={1}>
+                        <Text fontSize={19} style={{ marginLeft: 25 }} noOfLines={1}>
                             Software Engineer ( Streamer / Developer / Designer )
                         </Text>
                         {/* <p style={{ marginLeft: 50 }}>Embeded Development engineer at Valve</p> */} {/* one day :') */}
                         <NowPlaying ml={50} />
                     </Box>
-                    <Box flexShrink={0} mt={{ base: 4, md: -4 }} ml={{ md: 6 }} textAlign="center">
+                    <Box flexShrink={0} mt={{ base: 4, md: -4 }} ml={{ md: 2 }} textAlign="center">
                         <ProfilePicture />
                     </Box>
                 </Box>
