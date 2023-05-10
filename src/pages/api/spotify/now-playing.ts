@@ -23,7 +23,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // extract the data we want
     const isPlaying = song.is_playing;
     const title = song.item.name;
-    const artist = song.item.artists.map(_artist => _artist.name).join(", ");
+    // only include the first 3 artists
+    const artist = song.item.artists
+        .map(_artist => _artist.name)
+        .slice(0, 3)
+        .join(", ");
     const album = song.item.album.name;
     const image = song.item.album.images[0].url;
     const songUrl = song.item.external_urls.spotify;
