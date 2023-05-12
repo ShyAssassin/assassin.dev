@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import NavBar from "@components/NavBar";
 import Footer from "@components/Footer";
 import { AnimatePresence } from "framer-motion";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps, router }: AppProps) {
     return (
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
             </Head>
+            <Analytics />
             <NavBar router={router.pathname} />
             {/* 
                 for some reason animating on page load sometimes causes the entire page to frreze for a second
