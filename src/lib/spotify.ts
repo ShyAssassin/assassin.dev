@@ -1,25 +1,25 @@
-const clientId = process.env.SPOTIFY_CLIENT_ID;
-const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
-const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
+const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
+const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
+const REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN;
 
 const DEVICES_ENDPOINT = `https://api.spotify.com/v1/me/player/devices`;
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks`;
 const TOP_ARTISTS_ENDPOINT = `https://api.spotify.com/v1/me/top/artists`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
-const basic = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
+const BASIC = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString("base64");
 
 // refresh access token with refresh_token
 async function GetAccessToken() {
     const response = await fetch(TOKEN_ENDPOINT, {
         method: "POST",
         headers: {
-            Authorization: `Basic ${basic}`,
+            Authorization: `Basic ${BASIC}`,
             "Content-Type": "application/x-www-form-urlencoded"
         },
         body: new URLSearchParams({
             grant_type: "refresh_token",
-            refresh_token: refreshToken
+            refresh_token: REFRESH_TOKEN
         })
     });
     // return updated access token
