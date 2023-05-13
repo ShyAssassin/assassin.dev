@@ -9,7 +9,9 @@ export default function ProjectCard({ title, image, href, description }) {
                     <Text fontSize={"2xl"} fontWeight={"bold"}>
                         {title}
                     </Text>
-                    <Image style={{ borderRadius: "12px" }} src={image} alt={title} placeholder="blur" />
+                    <Box style={{position: "relative", width: 310, height: 175}}>
+                        <Image style={{ borderRadius: "12px" }} src={image} alt={title} placeholder="blur" fill loading="lazy" />
+                    </Box>
                     <Text mt={-1} fontSize={"15"} noOfLines={2}>
                         {description}
                     </Text>

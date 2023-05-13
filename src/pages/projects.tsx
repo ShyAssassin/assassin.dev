@@ -7,13 +7,14 @@ import ProjectCard from "@components/ProjectCard";
 import placholder from "@public/images/projects/placeholder.png";
 import assassin_dev from "@public/images/projects/assassin-dev.png";
 import Monarch from "@public/images/projects/monarch.png";
+import sdb from "@public/images/projects/sdb.png";
 
 export default function Projects() {
     return (
         <Layout>
             <Head>
                 <title>Assassin | Projects</title>
-                <meta name="description" content="A list of projects i have worked on" />
+                <meta name="description" content="A bunch of projects i have worked on" />
             </Head>
             <SimpleGrid columns={[1, 2]} spacing={5}>
                 <ProjectCard
@@ -23,10 +24,10 @@ export default function Projects() {
                     description={"My personal website and portfolio (The site you are on right now)"}
                 />
                 <ProjectCard
-                    title={"ETVR Tracking Backend"}
-                    image={placholder}
-                    href={"https://github.com/ShyAssassin/ETVR-Tracking-Backend"}
-                    description={"The eye tracking backend for the EyeTrackVR project"}
+                    title={"Stable Diffusion Bot"}
+                    image={sdb}
+                    href={"https://github.com/ShyAssassin/Stable-Diffusion-Bot"}
+                    description={"A Discord bot for generating images with Stable Diffusion"}
                 />
                 <ProjectCard
                     title={"PyMake"}
