@@ -16,7 +16,7 @@ export default function Projects() {
                 <title>Assassin | Projects</title>
                 <meta name="description" content="A bunch of projects i have worked on" />
             </Head>
-            <SimpleGrid columns={[1, 2]} spacing={5}>
+            <SimpleGrid columns={[1, 2]} spacing={[0, 1, 5]}>
                 <ProjectCard
                     title={"assassin.dev"}
                     image={assassin_dev}
