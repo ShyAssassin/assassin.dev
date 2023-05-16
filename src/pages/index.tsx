@@ -5,6 +5,13 @@ import Technologies from "@components/Technologies";
 import NowPlaying from "@components/NowPlaying";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import ProfilePicture from "@components/ProfilePicture";
+import dynamic from "next/dynamic";
+import ModelLoader from "@components/ModelLoader";
+
+const Model = dynamic(() => import("@components/Model"), {
+    ssr: false,
+    loading: () => <ModelLoader />
+});
 
 export default function Index() {
     return (
@@ -13,6 +20,7 @@ export default function Index() {
                 <title>Assassin | Developer</title>
                 <meta name="description" content="Assassin's Personal Website and portfolio" />
             </Head>
+            <Model />
             {/* Intro */}
             {/* TODO: Maybe make this a component? */}
             <Box display={"flex"}>

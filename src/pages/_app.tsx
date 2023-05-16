@@ -17,7 +17,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
             <Analytics />
             <NavBar router={router.pathname} />
             {/* 
-                for some reason animating on page load sometimes causes the entire page to frreze for a second
+                for some reason animating on page load sometimes causes the entire page to freeze for a second
                 when loaded for the first time if nothing is cached on some chromium based broswers?????? 
                 TODO: this is fucked figure out what is wrong; most probably a issue with something wanting to be loaded and taking too long
             */}

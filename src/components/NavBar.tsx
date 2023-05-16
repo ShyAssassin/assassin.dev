@@ -3,12 +3,12 @@ import NextLink from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ThemeToggleButton from "@components/ThemeToggleButton";
 import { Heading, Flex, MenuList, Menu, MenuItem, MenuButton } from "@chakra-ui/react";
-import { Box, Container, Stack, Link, IconButton } from "@chakra-ui/react";
+import { Box, Container, Stack, Link, IconButton, useColorModeValue } from "@chakra-ui/react";
 import NavBarLink from "@components/NavBarLink";
 
 export default function NavBar({ router }) {
     return (
-        <Box w="100%">
+        <Box w="100%" zIndex={1} as={"nav"} position={"relative"} bg={useColorModeValue("#FFFFFF5E", "#1A202C5E")} css={{ backdropFilter: "blur(10px)" }}>
             <Container display={"flex"} p={2} maxW={"3xl"} justifyContent={"space-between"} alignItems={"center"} flexWrap={"wrap"}>
                 {/* logo */}
                 <Flex align="center" cursor={"pointer"} mr={0}>
