@@ -5,9 +5,9 @@ export function ModelSpinner() {
     return (
         <Spinner 
         size="xl"
-        position={"absolute"}
+        position={"relative"}
         left={"50%"}
-        top={"40%"}
+        top={"45%"}
         ml={"calc(0px - var(--spinner-size) / 2)"}
         mt={"calc(0px - var(--spinner-size))"}
     />
