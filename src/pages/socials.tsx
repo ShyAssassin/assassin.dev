@@ -1,5 +1,6 @@
 import { Stack, VStack, Center, Text } from "@chakra-ui/react";
 import { FaTwitter, FaTwitch, FaGithub, FaDiscord, FaSteam, FaMastodon } from "react-icons/fa";
+import { SiKofi } from "react-icons/si";
 import Head from "next/head";
 import Layout from "@components/layouts/layout";
 import ProfilePicture from "@components/ProfilePicture";
@@ -17,7 +18,7 @@ export default function Socials() {
                 <Stack spacing={4} align={"center"} maxW={"xl"} w={"full"}>
                     <VStack spacing={0} maxW={"xl"}>
                         <ProfilePicture />
-                        <Text fontSize={"3xl"}>[Assassin]</Text>
+                        <Text fontSize={"3xl"} fontWeight={"semibold"}>[Assassin]</Text>
                         <Text>I do alot of dumb shit in VR</Text>
                     </VStack>
                     <SocialButton label={"Twitter"} href="https://twitter.com/ShyyAssassin/">
@@ -40,7 +41,11 @@ export default function Socials() {
                         <FaSteam />
                         <Text>&nbsp;Steam</Text>
                     </SocialButton>
-                    <SocialButton label={"Twitter"} href="https://discord.com/">
+                    <SocialButton label={"Ko-Fi"} href="https://ko-fi.com/ShyAssassin/">
+                        <SiKofi />
+                        <Text>&nbsp;Ko-Fi</Text>
+                    </SocialButton>
+                    <SocialButton label={"Discord"} href="https://discord.com/">
                         <FaDiscord />
                         <Text>&nbsp;Discord</Text>
                     </SocialButton>
