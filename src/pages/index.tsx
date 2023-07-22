@@ -34,10 +34,7 @@ export default function Index() {
                         <Text fontSize={19} marginLeft={25} noOfLines={1}>
                             Software Engineer ( Streamer / Developer / Designer )
                         </Text>
-                        <Text marginLeft={50}>
-                            Software Engineering Intern At Amazon
-                        </Text>
-                        <NowPlaying ml={75} />
+                        <NowPlaying ml={50} />
                     </Box>
                     <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 2 }} textAlign="center">
                         <ProfilePicture />
@@ -53,10 +50,7 @@ export default function Index() {
                             <Text noOfLines={1} fontSize={[15, 18]} marginLeft={15}>
                                 Software Engineer ( Streamer / Developer / Designer )
                             </Text>
-                            <Text noOfLines={1} fontSize={[15, 17]} marginLeft={30}>
-                                Software Engineering Intern At Amazon
-                            </Text>
-                            <NowPlaying ml={45} />
+                            <NowPlaying ml={30} />
                         </Box>
                     </Box>
                 </Box>
