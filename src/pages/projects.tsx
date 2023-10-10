@@ -8,6 +8,7 @@ import placholder from "@public/images/projects/placeholder.png";
 import assassin_dev from "@public/images/projects/assassin-dev.png";
 import Monarch from "@public/images/projects/monarch.png";
 import sdb from "@public/images/projects/sdb.png";
+import etvr from "@public/images/projects/etvr.png";
 
 export default function Projects() {
     return (
@@ -18,10 +19,10 @@ export default function Projects() {
             </Head>
             <SimpleGrid columns={[1, 2]} spacing={[0, 1, 5]}>
                 <ProjectCard
-                    title={"assassin.dev"}
-                    image={assassin_dev}
-                    href={"https://github.com/ShyAssassin/assassin.dev"}
-                    description={"My personal website and portfolio (The site you are on right now)"}
+                    title={"EyeTrackVR"}
+                    image={etvr}
+                    href={"https://github.com/EyeTrackVR"}
+                    description={"Open Source, Affordable DIY eye tracking for VR headsets"}
                 />
                 <ProjectCard
                     title={"Stable Diffusion Bot"}
@@ -30,16 +31,22 @@ export default function Projects() {
                     description={"A Discord bot for generating images with Stable Diffusion"}
                 />
                 <ProjectCard
-                    title={"PyMake"}
-                    image={placholder}
-                    href={"https://github.com/ShyAssassin/PyMake"}
-                    description={"A simple tool to add make-like functionality to Python projects"}
+                    title={"assassin.dev"}
+                    image={assassin_dev}
+                    href={"https://github.com/ShyAssassin/assassin.dev"}
+                    description={"A complete revamp of my personal website and portfolio"}
                 />
                 <ProjectCard
                     title={"Monarch"}
                     image={Monarch}
                     href={"https://github.com/ShyAssassin/Monarch"}
                     description={"Monarch is my custom game engine inspired heavily by valve's source engine"}
+                />
+                <ProjectCard
+                    title={"PyMake"}
+                    image={placholder}
+                    href={"https://github.com/ShyAssassin/PyMake"}
+                    description={"A simple tool to add make-like functionality to Python projects"}
                 />
             </SimpleGrid>
         </Layout>

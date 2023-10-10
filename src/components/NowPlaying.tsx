@@ -18,7 +18,7 @@ export default function NowPlaying({ ml = 0 }) {
         <Box maxW={"md"} w={"full"} style={{ marginLeft: ml }}>
             <a href={songUrl} target="_blank" rel="noopener noreferrer">
                 <HStack spacing={1}>
-                    <SpotifyLogo width={16} height={16}/>
+                    <SpotifyLogo width={16} height={16} />
                     <Box fontWeight={"bold"} fontSize={"13"} noOfLines={1}>
                         {title}
                     </Box>
