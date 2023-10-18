@@ -21,7 +21,7 @@ export default function Socials() {
                         <Text fontSize={"3xl"} fontWeight={"semibold"}>
                             [Assassin]
                         </Text>
-                        <Text>I do alot of dumb shit in VR</Text>
+                        <Text>I do alot of dumb stuff in VR</Text>
                     </VStack>
                     <SocialButton label={"PGP Key"} href="https://pgp.assassin.dev/">
                         <FaKey />

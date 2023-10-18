@@ -7,8 +7,9 @@ import ProjectCard from "@components/ProjectCard";
 import placholder from "@public/images/projects/placeholder.png";
 import assassin_dev from "@public/images/projects/assassin-dev.png";
 import Monarch from "@public/images/projects/monarch.png";
-import sdb from "@public/images/projects/sdb.png";
+import vngrd from "@public/images/projects/vngrd.png";
 import etvr from "@public/images/projects/etvr.png";
+import sdb from "@public/images/projects/sdb.png";
 
 export default function Projects() {
     return (
@@ -23,6 +24,12 @@ export default function Projects() {
                     image={etvr}
                     href={"https://github.com/EyeTrackVR"}
                     description={"Open Source, Affordable DIY eye tracking for VR headsets"}
+                />
+                <ProjectCard
+                    title={"Project://Vanguard"}
+                    image={vngrd}
+                    href={"https://project-vanguard.netlify.app/"}
+                    description={"A comunity made spiritual succesor to 'Titanfall 2'"}
                 />
                 <ProjectCard
                     title={"Stable Diffusion Bot"}
