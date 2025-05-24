@@ -1,5 +1,5 @@
+import { FaTwitter, FaTwitch, FaGithub, FaSteam, FaMastodon, FaKey, FaBluesky } from "react-icons/fa";
 import { Stack, VStack, Center, Text } from "@chakra-ui/react";
-import { FaTwitter, FaTwitch, FaGithub, FaSteam, FaMastodon, FaKey } from "react-icons/fa";
 import { SiKofi } from "react-icons/si";
 import Head from "next/head";
 import Layout from "@components/layouts/layout";
@@ -30,6 +30,10 @@ export default function Socials() {
                     <SocialButton label={"Github"} href="https://github.com/ShyAssassin/">
                         <FaGithub />
                         <Text>&nbsp;Github</Text>
+                    </SocialButton>
+                    <SocialButton label={"BlueSky"} href="https://bsky.app/profile/assassin.dev">
+                        <FaBluesky />
+                        <Text>&nbsp;Bluesky</Text>
                     </SocialButton>
                     <SocialButton label={"Twitter"} href="https://twitter.com/ShyyAssassin/">
                         <FaTwitter />
