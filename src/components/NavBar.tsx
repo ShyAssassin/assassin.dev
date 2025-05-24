@@ -46,6 +46,7 @@ export default function NavBar({ router }) {
                     <Box ml={2} display={{ base: "inline-block", md: "none" }}>
                         {/* hamburger menu */}
                         <Menu isLazy id="navbar-menu">
+                            {/* @ts-ignore */}
                             <MenuButton as={IconButton} icon={<GiHamburgerMenu />} variant="outline" aria-label="Options" />
                             <MenuList>
                                 <NextLink href={"/"} scroll={false}>

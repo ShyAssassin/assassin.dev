@@ -16,6 +16,7 @@ export default function ThemeToggleButton() {
                 <IconButton
                     aria-label="Toggle theme"
                     colorScheme={useColorModeValue("purple", "gray")}
+                    // @ts-ignore
                     icon={useColorModeValue(<FaMoon />, <FaSun />)}
                     onClick={toggleColorMode}></IconButton>
             </motion.div>
