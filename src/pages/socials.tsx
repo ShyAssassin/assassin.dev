@@ -43,7 +43,7 @@ export default function Socials() {
                         <FaTwitter />
                         <Text>&nbsp;Twitter</Text>
                     </SocialButton>
-                    <SocialButton label={"Twitch"} href="https://www.twitch.tv/ShyyAssassin/">
+                    <SocialButton label={"Twitch"} href="https://www.twitch.tv/ShyAssassinVT/">
                         {/* @ts-ignore */}
                         <FaTwitch />
                         <Text>&nbsp;Twitch</Text>
