@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { GetNowPlaying } from "@lib/spotify";
 
+export const runtime = 'edge';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const response = await GetNowPlaying();
 
