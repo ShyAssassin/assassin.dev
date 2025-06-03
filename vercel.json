@@ -5,6 +5,7 @@
     "git": {
         "deploymentEnabled": {
             "*": false,
+            "V2": false,
             "master": true
         }
     }
