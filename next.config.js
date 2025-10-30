@@ -21,6 +21,14 @@ const nextConfig = {
             use: ["@svgr/webpack"]
         });
         return config;
+    },
+    async rewrites() {
+        return [
+            {
+                source: "/.well-known/:path*",
+                destination: "/api/well-known/:path*"
+            }
+        ];
     }
 };
 
