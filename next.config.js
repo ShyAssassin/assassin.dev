@@ -25,6 +25,14 @@ const nextConfig = {
     async rewrites() {
         return [
             {
+                source: "/.well-known/matrix/client",
+                destination: "https://matrix.assassin.dev/.well-known/matrix/client"
+            },
+            {
+                source: "/.well-known/matrix/server",
+                destination: "https://matrix.assassin.dev/.well-known/matrix/server"
+            },
+            {
                 source: "/.well-known/:path*",
                 destination: "/api/well-known/:path*"
             }
