@@ -1,23 +1,28 @@
+import { NextRequest, NextResponse } from "next/server";
+
 export const runtime = 'edge';
 
-import { NextApiRequest, NextApiResponse } from "next";
-import path from "path";
-import fs from "fs";
+export default async function handler(req: NextRequest) {
+    const { pathname } = new URL(req.url);
+    const slug = pathname.replace('/api/well-known/', '');
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const { slug } = req.query;
-
-    if (!slug || !Array.isArray(slug)) {
-        return res.status(404).send("Not Found");
+    if (!slug) {
+        return new NextResponse("Not Found", { status: 404 });
     }
 
-    const filePath = path.join(process.cwd(), "public", ".well-known", ...slug);
+    try {
+        const response = await fetch(new URL(`/.well-known/${slug}`, req.url));
 
-    fs.readFile(filePath, "utf8", (err, data) => {
-        if (err) {
-            return res.status(404).send("Not Found");
+        if (!response.ok) {
+            return new NextResponse("Not Found", { status: 404 });
         }
-        res.setHeader("Content-Type", "application/json");
-        res.status(200).send(data);
-    });
+
+        const data = await response.text();
+        return new NextResponse(data, {
+            status: 200,
+            headers: { "Content-Type": "application/json" }
+        });
+    } catch (error) {
+        return new NextResponse("Not Found", { status: 404 });
+    }
 }
