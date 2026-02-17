@@ -29,7 +29,7 @@ export default function Projects() {
                     title={"Project://Vanguard"}
                     image={vngrd}
                     href={"https://project-vanguard.netlify.app/"}
-                    description={"A comunity made spiritual succesor to 'Titanfall 2'"}
+                    description={"A community made spiritual succesor to 'Titanfall 2'"}
                 />
                 <ProjectCard
                     title={"Stable Diffusion Bot"}
