@@ -1,0 +1,20 @@
+**/.direnv
+**/.svelte-kit
+**/node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/build
+
+# Env
+.env
+.env.*
+!.env.test
+!.env.example
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
