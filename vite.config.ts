@@ -1,6 +1,8 @@
 import { mdsvex } from "mdsvex";
 import { defineConfig } from "vite";
+import remarkMath from "remark-math";
 import adapter from "@sveltejs/adapter-auto";
+import rehypeKatex from "rehype-katex-svelte";
 import { sveltekit } from "@sveltejs/kit/vite";
 
 export default defineConfig({
@@ -17,7 +19,11 @@ export default defineConfig({
             // See https://svelte.dev/docs/kit/adapters for more information about adapters.
             adapter: adapter(),
             extensions: [".svelte", ".svx", ".md"],
-            preprocess: [mdsvex({ extensions: [".svx", ".md"] })],
+            preprocess: [mdsvex({
+                remarkPlugins: [remarkMath],
+                rehypePlugins: [rehypeKatex],
+                extensions: [".svx", ".md", ".mdx"],
+            })],
         }),
     ],
 });
