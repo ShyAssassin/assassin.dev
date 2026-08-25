@@ -15,7 +15,7 @@ function formatDate(dateValue: string): string {
 export async function GET(request: RequestEvent): Promise<Response> {
     if (request.url.searchParams.size <= 0) {
         const posts: Post[] = [];
-        const paths = import.meta.glob("$lib/posts/*.md", { eager: true });
+        const paths = import.meta.glob("$lib/posts/**/*.md", { eager: true });
 
         for (const path in paths) {
             const file = paths[path] as Record<string, unknown>;
@@ -27,6 +27,7 @@ export async function GET(request: RequestEvent): Promise<Response> {
                 title: metadata.title,
                 tags: metadata.tags || [],
                 published: metadata.published,
+                bannerImage: metadata.bannerImage,
                 publishedDate: formatDate(metadata.publishedDate),
                 description: metadata.description.replace(/\n/g, " ").trim(),
             });

@@ -5,5 +5,6 @@ export type Post = {
     filePath: string
     published: boolean
     description: string
+    bannerImage?: string
     publishedDate: string
 };

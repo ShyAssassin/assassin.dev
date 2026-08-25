@@ -4,6 +4,7 @@ slug: markdown-test
 title: Hello World!!!
 tags: [test, markdown]
 publishedDate: 2026-08-21
+bannerImage: assets/banner.jpg
 description: You curious little thing, stumbling upon a test post. Probably not what you were looking for
              But hey - you found it, You may now look and laugh at my code failing to render markdown properly :p
 ---
@@ -12,6 +13,8 @@ description: You curious little thing, stumbling upon a test post. Probably not 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis, tortor nec ornare scelerisque, urna libero luctus urna, sed rhoncus lorem
 neque vitae ligula. Phasellus imperdiet lorem ut libero bibendum ultricies. Integer maximus tincidunt urna et placerat. In posuere tempor massa,
 
+# Image
+![Test Image](assets/imageTest.png)
 
 # Text Edge Cases
 
