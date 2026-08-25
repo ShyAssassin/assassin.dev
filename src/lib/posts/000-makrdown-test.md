@@ -1,10 +1,11 @@
 ---
-slug: md-test
 published: false
-title: Hello World!
+slug: markdown-test
+title: Hello World!!!
 tags: [test, markdown]
 publishedDate: 2026-08-21
-description: You curious little thing
+description: You curious little thing, stumbling upon a test post. Probably not what you were looking for
+             But hey - you found it, You may now look and laugh at my code failing to render markdown properly :p
 ---
 
 # Text
