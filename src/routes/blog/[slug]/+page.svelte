@@ -1,10 +1,8 @@
 <script lang="ts">
     import mermaid from "mermaid";
     import { onMount } from "svelte";
-    import { page } from "$app/state";
     import type { PageData } from "./$types";
 
-    const host = page.url.origin;
     mermaid.initialize({ startOnLoad: false });
     let { data }: { data: PageData } = $props();
 
@@ -39,7 +37,6 @@
 <svelte:head>
     <title>{data.post.title}</title>
     <meta property="og:type" content="article" />
-    <base href={`${host}/blog/${data.post.slug}/`} />
     <meta property="og:title" content={data.post.title} />
     <meta property="og:description" content={data.post.description} />
     <meta property="og:image" content={data.post.bannerImage || "/favicon.svg"} />
