@@ -27,12 +27,13 @@ export async function GET(request: RequestEvent): Promise<Response> {
                 title: metadata.title,
                 tags: metadata.tags || [],
                 published: metadata.published,
-                description: metadata.description,
                 publishedDate: formatDate(metadata.publishedDate),
+                description: metadata.description.replace(/\n/g, " ").trim(),
             });
         }
 
-        return new Response(JSON.stringify(posts));
+        posts.sort((a, b) => new Date(b.publishedDate).valueOf() - new Date(a.publishedDate).valueOf());
+        return new Response(JSON.stringify(posts), { headers: { "Content-Type": "application/json" } });
     } else {
         let posts: Post[] = await request.fetch("/api/posts").then(res => res.json());
         if (request.url.searchParams.has("slug")) {
@@ -44,6 +45,6 @@ export async function GET(request: RequestEvent): Promise<Response> {
             posts = posts.filter(post => tags.every(tag => post.tags.includes(tag)));
         }
 
-        return new Response(JSON.stringify(posts));
+        return new Response(JSON.stringify(posts), { headers: { "Content-Type": "application/json" } });
     }
 }
